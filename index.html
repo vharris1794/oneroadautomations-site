@@ -10,13 +10,20 @@
 <meta property="og:title" content="One Road Automations | Websites for Local Service Businesses" />
 <meta property="og:description" content="Flat-price websites for local service businesses. Built fast, handed off to you, no monthly fees." />
 <meta property="og:url" content="https://oneroadautomations.com/" />
-<meta name="theme-color" content="#12405C" />
+<meta name="theme-color" content="#0A0D12" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Martian+Mono:wght@400;500&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<script>
+  document.documentElement.classList.add("js");
+  // If script.js never runs, show everything rather than leave reveal content hidden.
+  setTimeout(function () {
+    if (!window.__ora) { document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); }); }
+  }, 2500);
+</script>
 
 <script type="application/ld+json">
 {
@@ -42,15 +49,15 @@
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="One Road Automations home">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none"><path d="M11 28 14.5 5M21 28 17.5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 25v-3M16 17.5V15M16 11V9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 32 32" fill="none"><path d="M11 28 14.5 5M21 28 17.5 5" stroke="#E9EEF3" stroke-width="2.5" stroke-linecap="round"/><path d="M16 25v-3M16 17.5V15M16 11V9" stroke="#FFB224" stroke-width="2.2" stroke-linecap="round"/></svg>
       </span>
-      <span class="brand-text">One Road<span class="brand-thin">Automations</span></span>
+      <span class="brand-name">One Road<small>Automations</small></span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Primary">
       <a href="#packages">Packages</a>
-      <a href="#included">What's Included</a>
-      <a href="#how">How It Works</a>
+      <a href="#included">What's included</a>
+      <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -60,7 +67,7 @@
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5 9 3l1.8 4.2-2 1.6a12 12 0 0 0 5.4 5.4l1.6-2L21 15l-.5 2.5A2 2 0 0 1 18.3 19 15 15 0 0 1 5 5.7 2 2 0 0 1 6.5 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
         <span>(914) 263-2944</span>
       </a>
-      <a class="btn btn-accent btn-sm" href="#packages">See packages</a>
+      <a class="btn btn-amber btn-sm" href="#packages">See pricing</a>
     </div>
 
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
@@ -73,76 +80,74 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow reveal"><span class="dot"></span> Websites for local service businesses</p>
-        <h1 class="reveal" style="--d:.05s">A professional website, <span class="hl">yours to keep.</span></h1>
-        <p class="lede reveal" style="--d:.1s">I design and build fast, mobile-first websites for plumbers, HVAC techs, contractors, and other local service businesses. One flat price, then it's handed off to you: your site, your domain, your hosting. No contracts and no monthly fees to me.</p>
-        <div class="hero-actions reveal" style="--d:.15s">
-          <a class="btn btn-accent" href="#packages">See packages &amp; pricing</a>
+        <p class="prompt reveal"><b>&gt;</b>websites + automation for local service businesses<span class="cursor" aria-hidden="true"></span></p>
+        <h1 class="reveal" style="--d:.06s">A professional website, <em>yours to keep.</em></h1>
+        <p class="lede reveal" style="--d:.12s">I design and build fast, mobile-first websites for plumbers, HVAC techs, contractors, and other local service businesses. One flat price, then it's handed off to you: your site, your domain, your hosting. No contracts and no monthly fees to me.</p>
+        <div class="hero-actions reveal" style="--d:.18s">
+          <a class="btn btn-amber" href="#packages">See packages &amp; pricing</a>
           <a class="btn btn-ghost" href="tel:+19142632944">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5 9 3l1.8 4.2-2 1.6a12 12 0 0 0 5.4 5.4l1.6-2L21 15l-.5 2.5A2 2 0 0 1 18.3 19 15 15 0 0 1 5 5.7 2 2 0 0 1 6.5 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
             Call or text
           </a>
         </div>
-        <ul class="hero-stats reveal" style="--d:.2s">
-          <li><strong>$500</strong><span>Flat price, starting at</span></li>
-          <li><strong>~1 week</strong><span>Typical turnaround</span></li>
-          <li><strong>$0/mo</strong><span>Monthly fees to me</span></li>
+        <ul class="stats reveal" style="--d:.24s">
+          <li><strong>$500</strong><span>Starting price</span></li>
+          <li><strong>~1 week</strong><span>Turnaround</span></li>
+          <li><strong>$0/mo</strong><span>Fees to me</span></li>
         </ul>
       </div>
 
-      <div class="hero-visual reveal" style="--d:.25s" aria-hidden="true">
-        <div class="visual-card">
-          <div class="vc-badge">Yours to keep</div>
-          <div class="mock-browser">
-            <div class="mock-bar"><i></i><i></i><i></i></div>
-            <div class="mock-body">
-              <div class="mock-line lg"></div>
-              <div class="mock-line md"></div>
-              <div class="mock-line sm"></div>
-              <div class="mock-cta"></div>
-              <div class="mock-tiles"><span></span><span></span><span></span></div>
-            </div>
-          </div>
-          <div class="vc-row">
-            <span class="vc-check">✓ Mobile-first</span>
-            <span class="vc-check">✓ Tap-to-call</span>
-            <span class="vc-check">✓ You own it</span>
+      <!-- Decorative: a sample site plus sample receptionist alerts (clearly labeled as a demo) -->
+      <div class="console reveal" style="--d:.2s" aria-hidden="true">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url"><b>https://</b>yourbusiness.com</span></div>
+          <div class="site-mock">
+            <div class="sm-nav"><span class="sm-logo"></span><span class="sm-call"></span></div>
+            <span class="sm-h"></span>
+            <span class="sm-h s"></span>
+            <span class="sm-p"></span>
+            <span class="sm-p s"></span>
+            <div class="sm-tiles"><span></span><span></span><span></span></div>
           </div>
         </div>
-        <div class="visual-float">
-          <div class="vf-price">$500 flat</div>
-          <p>A one-page site with tap-to-call, a contact form, and basic SEO.</p>
-          <span>Starter package · live in about a week</span>
+        <div class="alerts">
+          <div class="alerts-head"><span>Sample alerts · AI receptionist</span><span class="live">Demo</span></div>
+          <ul>
+            <li style="--i:0"><time>02:14 AM</time><span>Burst pipe, urgent</span><span class="ok">→ texted owner</span></li>
+            <li style="--i:1"><time>07:52 AM</time><span>Quote: water heater</span><span class="ok">→ emailed</span></li>
+            <li style="--i:2"><time>11:30 AM</time><span>"Open Saturday?"</span><span class="ok">→ answered</span></li>
+            <li style="--i:3"><time>--:--</time><span class="listening">listening<span class="dots"></span></span></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== TRUST BAR ===================== -->
-  <section class="trustbar">
-    <div class="wrap trustbar-inner">
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Flat, upfront pricing</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> You own everything</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> No monthly fees to me</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Built for phones first</div>
+  <!-- ===================== STRIP ===================== -->
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <span>Flat, upfront pricing</span>
+      <span>You own everything</span>
+      <span>No monthly fees to me</span>
+      <span>Built for phones first</span>
     </div>
-  </section>
+  </div>
 
   <!-- ===================== PACKAGES ===================== -->
   <section class="section" id="packages">
+    <div class="lane" aria-hidden="true"></div>
     <div class="wrap">
-      <header class="section-head">
-        <p class="eyebrow"><span class="dot"></span> Packages &amp; pricing</p>
-        <h2>Pick a package. Pay once. Keep it forever.</h2>
+      <header class="section-head reveal">
+        <p class="kicker"><span class="num">01</span> Packages &amp; pricing</p>
+        <h2>Pick a package. Pay once. <em>Keep it forever.</em></h2>
         <p class="section-sub">Every site is built for phones first, loads fast, and puts your phone number one tap away.</p>
       </header>
 
-      <div class="pricing-grid">
+      <div class="pricing-grid reveal">
         <article class="price-card">
-          <h3 class="price-name">Starter</h3>
+          <h3 class="price-tier">Starter</h3>
           <p class="price-amt">$500<small>one-time</small></p>
           <p class="price-desc">A clean one-page website that makes you look established and gets the phone ringing.</p>
           <ul class="price-list">
@@ -159,7 +164,7 @@
 
         <article class="price-card featured">
           <span class="price-badge">Most popular</span>
-          <h3 class="price-name">Standard</h3>
+          <h3 class="price-tier">Standard</h3>
           <p class="price-amt">$750<small>one-time</small></p>
           <p class="price-desc">Everything in Starter, plus the pages and proof that turn visitors into calls.</p>
           <ul class="price-list">
@@ -169,11 +174,11 @@
             <li>Social media links</li>
             <li>SEO set up on every page</li>
           </ul>
-          <a class="btn btn-accent btn-block" href="mailto:info@oneroadautomations.com?subject=Standard%20website%20(%24750)">Get started</a>
+          <a class="btn btn-amber btn-block" href="mailto:info@oneroadautomations.com?subject=Standard%20website%20(%24750)">Get started</a>
         </article>
 
         <article class="price-card">
-          <h3 class="price-name">Premium</h3>
+          <h3 class="price-tier">Premium</h3>
           <p class="price-amt">$1,000<small>one-time</small></p>
           <p class="price-desc">Everything in Standard, plus a bigger, more polished site that stands out in your area.</p>
           <ul class="price-list">
@@ -187,16 +192,16 @@
         </article>
       </div>
 
-      <p class="pricing-note"><strong>Payment:</strong> 50% deposit to start and the balance on delivery, by secure card payment through Stripe. Starter can be paid in full up front. See the <a href="terms.html#refunds" style="color:var(--brand);text-decoration:underline">refund &amp; cancellation policy</a>.</p>
+      <p class="pricing-note"><strong>Payment:</strong> 50% deposit to start and the balance on delivery, by secure card payment through Stripe. Starter can be paid in full up front. See the <a href="terms.html#refunds">refund &amp; cancellation policy</a>.</p>
 
-      <div class="addons">
+      <div class="addons reveal">
         <h3>Optional add-ons (one-time)</h3>
         <ul class="addons-list">
-          <li><span>Logo design</span><strong>$150</strong></li>
-          <li><span>Copywriting (I write your site text)</span><strong>$200</strong></li>
-          <li><span>Each additional page</span><strong>$75</strong></li>
-          <li><span>Domain setup help</span><strong>$75</strong></li>
-          <li><span>Google Business Profile setup</span><strong>$100</strong></li>
+          <li><span>Logo design</span><span class="leader" aria-hidden="true"></span><strong>$150</strong></li>
+          <li><span>Copywriting (I write your site text)</span><span class="leader" aria-hidden="true"></span><strong>$200</strong></li>
+          <li><span>Each additional page</span><span class="leader" aria-hidden="true"></span><strong>$75</strong></li>
+          <li><span>Domain setup help</span><span class="leader" aria-hidden="true"></span><strong>$75</strong></li>
+          <li><span>Google Business Profile setup</span><span class="leader" aria-hidden="true"></span><strong>$100</strong></li>
         </ul>
       </div>
     </div>
@@ -204,13 +209,14 @@
 
   <!-- ===================== INCLUDED ===================== -->
   <section class="section section-alt" id="included">
+    <div class="lane" aria-hidden="true"></div>
     <div class="wrap">
-      <header class="section-head">
-        <p class="eyebrow"><span class="dot"></span> No surprises</p>
-        <h2>What you get, and what you don't.</h2>
+      <header class="section-head reveal">
+        <p class="kicker"><span class="num">02</span> No surprises</p>
+        <h2>What you get, and <em>what you don't.</em></h2>
       </header>
       <div class="include-grid">
-        <div class="include-card yes">
+        <div class="panel yes reveal">
           <h3>Included in every build</h3>
           <ul>
             <li><strong>Mobile-first design</strong> that looks great on phones</li>
@@ -220,7 +226,7 @@
             <li><strong>Full ownership:</strong> the site runs on hosting and a domain in your name</li>
           </ul>
         </div>
-        <div class="include-card no">
+        <div class="panel no reveal" style="--d:.08s">
           <h3>Not included</h3>
           <ul>
             <li><strong>Hosting:</strong> runs on your own account, usually on a free plan (Netlify or Cloudflare Pages)</li>
@@ -235,33 +241,35 @@
 
   <!-- ===================== HOW IT WORKS ===================== -->
   <section class="section" id="how">
+    <div class="lane" aria-hidden="true"></div>
     <div class="wrap">
-      <header class="section-head">
-        <p class="eyebrow"><span class="dot"></span> How it works</p>
-        <h2>From first call to live site in about a week.</h2>
+      <header class="section-head reveal">
+        <p class="kicker"><span class="num">03</span> How it works</p>
+        <h2>From first call to live site in <em>about a week.</em></h2>
       </header>
-      <ol class="steps">
-        <li class="step"><h3>Pick a package</h3><p>Choose Starter, Standard, or Premium, plus any add-ons.</p></li>
-        <li class="step"><h3>Pay the deposit</h3><p>50% to start through a secure Stripe link. Starter can be paid in full.</p></li>
-        <li class="step"><h3>Send your details</h3><p>Logo, photos, services, hours, and service area.</p></li>
-        <li class="step"><h3>I build it</h3><p>Typically 5–7 business days after I have your content.</p></li>
-        <li class="step"><h3>Review it</h3><p>Up to two rounds of small revisions until it's right.</p></li>
-        <li class="step"><h3>It's yours</h3><p>Final payment, then I put the site on your own hosting and domain and hand over the logins.</p></li>
+      <ol class="road reveal">
+        <li class="stop"><span class="node">01</span><h3>Pick a package</h3><p>Choose Starter, Standard, or Premium, plus any add-ons.</p></li>
+        <li class="stop"><span class="node">02</span><h3>Pay the deposit</h3><p>50% to start through a secure Stripe link. Starter can be paid in full.</p></li>
+        <li class="stop"><span class="node">03</span><h3>Send your details</h3><p>Logo, photos, services, hours, and service area.</p></li>
+        <li class="stop"><span class="node">04</span><h3>I build it</h3><p>Typically 5–7 business days after I have your content.</p></li>
+        <li class="stop"><span class="node">05</span><h3>Review it</h3><p>Up to two rounds of small revisions until it's right.</p></li>
+        <li class="stop"><span class="node">06</span><h3>It's yours</h3><p>Final payment, then I put the site on your own hosting and domain and hand over the logins.</p></li>
       </ol>
     </div>
   </section>
 
   <!-- ===================== RECEPTIONIST ===================== -->
-  <section class="section section-alt">
+  <section class="section section-alt" id="receptionist">
     <div class="wrap">
-      <div class="band">
+      <div class="band reveal">
         <div>
-          <p class="eyebrow"><span class="dot"></span> Optional add-on service</p>
+          <p class="kicker"><span class="live">Optional add-on service</span></p>
           <h2>Never miss a call: a 24/7 AI receptionist.</h2>
           <p>It answers your calls and texts day or night, captures the customer's details, and alerts you right away, so an after-hours emergency doesn't go to a competitor. Offered as a separate monthly service whenever you're ready.</p>
+          <a class="btn btn-amber" href="mailto:info@oneroadautomations.com?subject=AI%20receptionist">Ask about it</a>
         </div>
-        <div class="band-actions">
-          <a class="btn btn-accent" href="mailto:info@oneroadautomations.com?subject=AI%20receptionist">Ask about it</a>
+        <div class="wave" aria-hidden="true">
+          <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span><span style="--i:8"></span><span style="--i:9"></span><span style="--i:10"></span><span style="--i:11"></span><span style="--i:12"></span><span style="--i:13"></span>
         </div>
       </div>
     </div>
@@ -269,12 +277,13 @@
 
   <!-- ===================== FAQ ===================== -->
   <section class="section" id="faq">
+    <div class="lane" aria-hidden="true"></div>
     <div class="wrap">
-      <header class="section-head">
-        <p class="eyebrow"><span class="dot"></span> FAQ</p>
+      <header class="section-head reveal">
+        <p class="kicker"><span class="num">04</span> FAQ</p>
         <h2>Common questions</h2>
       </header>
-      <div class="faq">
+      <div class="faq reveal">
         <details>
           <summary>Who owns the website?</summary>
           <p>You do. When the project is paid in full, the site goes onto hosting and a domain in your own name, and you get all the logins. Nothing is locked to me.</p>
@@ -305,21 +314,27 @@
 
   <!-- ===================== CONTACT ===================== -->
   <section class="section section-alt" id="contact">
+    <div class="lane" aria-hidden="true"></div>
     <div class="wrap contact-grid">
-      <div class="contact-copy">
-        <p class="eyebrow"><span class="dot"></span> Contact</p>
-        <h2>Let's get your business online.</h2>
+      <header class="section-head reveal">
+        <p class="kicker"><span class="num">05</span> Contact</p>
+        <h2>Let's get your business <em>online.</em></h2>
         <p class="section-sub">Questions, or ready to start? Email, call, or text and I'll get back to you as soon as I can. Once you pick a package, I'll send a secure Stripe payment link.</p>
-      </div>
-      <div class="contact-cards">
-        <a class="contact-card" href="mailto:info@oneroadautomations.com">
-          <span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><strong>Email</strong><span class="val">info@oneroadautomations.com</span></div>
-        </a>
-        <a class="contact-card" href="tel:+19142632944">
-          <span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5 9 3l1.8 4.2-2 1.6a12 12 0 0 0 5.4 5.4l1.6-2L21 15l-.5 2.5A2 2 0 0 1 18.3 19 15 15 0 0 1 5 5.7 2 2 0 0 1 6.5 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
-          <div><strong>Call or text</strong><span class="val">(914) 263-2944</span></div>
-        </a>
+        <div class="hero-actions">
+          <a class="btn btn-amber" href="mailto:info@oneroadautomations.com">Email me</a>
+          <a class="btn btn-ghost" href="tel:+19142632944">Call or text</a>
+        </div>
+      </header>
+      <div class="terminal reveal" style="--d:.1s">
+        <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">~/one-road-automations</span></div>
+        <div class="terminal-body">
+          <p class="t-cmd"><b>$</b>one-road --contact</p>
+          <p class="t-row"><span>email</span><a href="mailto:info@oneroadautomations.com">info@<wbr>oneroadautomations.com</a></p>
+          <p class="t-row"><span>phone</span><a href="tel:+19142632944">(914) 263-2944</a></p>
+          <p class="t-row"><span>based</span><em>New York</em></p>
+          <p class="t-row"><span>status</span><em class="ok">taking new projects</em></p>
+          <p class="t-cmd"><b>$</b><span class="cursor" aria-hidden="true"></span></p>
+        </div>
       </div>
     </div>
   </section>
@@ -329,35 +344,44 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="brand-text light">One Road<span class="brand-thin">Automations</span></span>
+      <a class="brand" href="#top" aria-label="One Road Automations, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M11 28 14.5 5M21 28 17.5 5" stroke="#E9EEF3" stroke-width="2.5" stroke-linecap="round"/><path d="M16 25v-3M16 17.5V15M16 11V9" stroke="#FFB224" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-name">One Road<small>Automations</small></span>
+      </a>
       <p>Flat-price websites for local service businesses, built fast and handed off to you.</p>
-      <p class="lic">One Road Automations is operated by Vincent Harris · New York</p>
+      <p class="op">One Road Automations is operated by Vincent Harris · New York</p>
     </div>
-    <nav class="footer-nav" aria-label="Footer">
+    <nav class="footer-col" aria-label="Site">
+      <h4>Site</h4>
       <a href="#packages">Packages</a>
-      <a href="#how">How It Works</a>
+      <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <nav class="footer-col" aria-label="Legal and contact">
+      <h4>Legal &amp; contact</h4>
       <a href="terms.html">Terms of Service</a>
       <a href="terms.html#refunds">Refund &amp; Cancellation Policy</a>
       <a href="privacy.html">Privacy Policy</a>
-    </nav>
-    <div class="footer-contact">
-      <a class="footer-phone" href="tel:+19142632944">(914) 263-2944</a>
+      <a href="tel:+19142632944">(914) 263-2944</a>
       <a href="mailto:info@oneroadautomations.com">info@oneroadautomations.com</a>
-    </div>
+    </nav>
   </div>
   <div class="wrap footer-bottom">
     <span>© <span id="year">2026</span> One Road Automations. All rights reserved.</span>
+    <span>oneroadautomations.com</span>
   </div>
 </footer>
 
 <!-- ===================== STICKY MOBILE BAR ===================== -->
 <div class="mobile-bar">
-  <a class="btn btn-outline-light" href="tel:+19142632944">
+  <a class="btn btn-ghost" href="tel:+19142632944">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3.5 9 3l1.8 4.2-2 1.6a12 12 0 0 0 5.4 5.4l1.6-2L21 15l-.5 2.5A2 2 0 0 1 18.3 19 15 15 0 0 1 5 5.7 2 2 0 0 1 6.5 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
     Call
   </a>
-  <a class="btn btn-accent" href="#packages">See packages</a>
+  <a class="btn btn-amber" href="#packages">See packages</a>
 </div>
 
 <script src="script.js" defer></script>
