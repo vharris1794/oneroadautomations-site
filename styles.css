@@ -372,6 +372,8 @@ button { font: inherit; color: inherit; }
 .cta-card { max-width: 860px; margin-inline: auto; padding: clamp(40px, 6vw, 68px) clamp(24px, 5vw, 64px); background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 28px; }
 .cta-card .sub { margin-inline: auto; color: var(--ink-2); }
 .cta-phone { display: inline-block; margin-top: 26px; font-size: clamp(2rem, 1.4rem + 2.6vw, 3.1rem); font-weight: 800; letter-spacing: -0.03em; color: var(--blue); font-variant-numeric: tabular-nums; }
+.cta-email { display: block; width: fit-content; margin: 6px auto 0; font-size: clamp(1.06rem, 1rem + .35vw, 1.2rem); font-weight: 650; color: var(--ink-2); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; text-decoration-color: var(--line-2); overflow-wrap: anywhere; }
+@media (hover: hover) and (pointer: fine) { .cta-email:hover { color: var(--blue); text-decoration-color: var(--blue); } }
 .cta .actions { justify-content: center; margin-top: 22px; }
 .cta-sign { margin-top: 26px; font-size: 14.5px; color: var(--muted); }
 
