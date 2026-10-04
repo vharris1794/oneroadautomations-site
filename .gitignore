@@ -1,0 +1,5 @@
+# Design-process files (Impeccable) stay local so GitHub Pages never publishes them
+PRODUCT.md
+DESIGN.md
+.impeccable/
+.claude/
