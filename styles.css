@@ -336,7 +336,7 @@ button { font: inherit; color: inherit; }
 .include-col li strong { color: var(--ink); font-weight: 650; }
 .include-col .icon { width: 20px; height: 20px; margin-top: 2px; }
 .include-col.yes .icon { color: var(--green); }
-.include-col.no .icon { color: #8A97AB; }
+.include-col.no .icon { color: #6F7C91; }
 
 /* ---------- How it works ---------- */
 .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 40px; counter-reset: step; }
