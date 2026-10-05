@@ -101,7 +101,6 @@ button { font: inherit; color: inherit; }
 .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 1px 2px rgba(12, 26, 51, .18), 0 4px 10px -4px rgba(12, 26, 51, .28); }
 .btn-secondary { background: #fff; color: var(--ink); border-color: var(--line-2); }
 .btn-light { background: #fff; color: var(--blue-700); }
-.btn-outline-light { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .55); }
 .btn-lg { min-height: 56px; padding: 15px 26px; font-size: 17px; }
 .btn-sm { min-height: 40px; padding: 8px 16px; font-size: 15px; }
 .btn-block { width: 100%; }
@@ -109,7 +108,6 @@ button { font: inherit; color: inherit; }
   .btn-primary:hover { background: var(--blue-600); }
   .btn-secondary:hover { border-color: var(--ink-2); }
   .btn-light:hover { background: var(--blue-50); }
-  .btn-outline-light:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
 }
 
 .text-link { color: var(--blue); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: rgba(31, 85, 224, .35); transition: text-decoration-color 160ms ease; }
