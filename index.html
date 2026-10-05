@@ -25,7 +25,6 @@
   "name": "One Road Automations",
   "url": "https://oneroadautomations.com/",
   "email": "info@oneroadautomations.com",
-  "telephone": "+19142632944",
   "priceRange": "$500–$1,000",
   "areaServed": "US",
   "address": { "@type": "PostalAddress", "addressRegion": "NY", "addressCountry": "US" },
@@ -91,7 +90,7 @@
         <h1 class="display">A professional website, <span class="hl">yours to keep.</span></h1>
         <p class="lede">I design and build fast, mobile-first websites for plumbers, HVAC techs, contractors, and other local service businesses. One flat price, then it's handed off to you: your site, your domain, your hosting. No contracts and no monthly fees to me.</p>
         <div class="actions">
-          <a class="btn btn-primary btn-lg" href="#contact"><svg class="icon"><use href="#i-phone"/></svg>Call or text me</a>
+          <a class="btn btn-primary btn-lg" href="#contact">Get started</a>
           <a class="btn btn-secondary btn-lg" href="#packages">See packages &amp; pricing</a>
         </div>
         <ul class="facts">
@@ -197,7 +196,7 @@
           <h3>Starter</h3>
           <p class="price-desc">A clean one-page website that makes you look established and gets the phone ringing.</p>
           <p class="price-amt"><strong>$500</strong><span>one-time</span></p>
-          <a class="btn btn-secondary btn-block" href="mailto:info@oneroadautomations.com?subject=Starter%20website%20(%24500)">Get started</a>
+          <a class="btn btn-secondary btn-block" href="#contact" data-package="Starter website ($500)">Get started</a>
           <ul class="price-list">
             <li><svg class="icon"><use href="#i-check"/></svg>Single-page, mobile-optimized site</li>
             <li><svg class="icon"><use href="#i-check"/></svg>Your logo, colors, and branding</li>
@@ -214,7 +213,7 @@
           <h3>Standard</h3>
           <p class="price-desc">Everything in Starter, plus the pages and proof that turn visitors into calls.</p>
           <p class="price-amt"><strong>$750</strong><span>one-time</span></p>
-          <a class="btn btn-primary btn-block" href="mailto:info@oneroadautomations.com?subject=Standard%20website%20(%24750)">Get started</a>
+          <a class="btn btn-primary btn-block" href="#contact" data-package="Standard website ($750)">Get started</a>
           <ul class="price-list">
             <li><svg class="icon"><use href="#i-check"/></svg><span><span class="lead">Everything in Starter</span>, plus:</span></li>
             <li><svg class="icon"><use href="#i-check"/></svg>Up to 5 pages (Home, Services, About, Reviews/Gallery, Contact)</li>
@@ -229,7 +228,7 @@
           <h3>Premium</h3>
           <p class="price-desc">Everything in Standard, plus a bigger, more polished site that stands out in your area.</p>
           <p class="price-amt"><strong>$1,000</strong><span>one-time</span></p>
-          <a class="btn btn-secondary btn-block" href="mailto:info@oneroadautomations.com?subject=Premium%20website%20(%241%2C000)">Get started</a>
+          <a class="btn btn-secondary btn-block" href="#contact" data-package="Premium website ($1,000)">Get started</a>
           <ul class="price-list">
             <li><svg class="icon"><use href="#i-check"/></svg><span><span class="lead">Everything in Standard</span>, plus:</span></li>
             <li><svg class="icon"><use href="#i-check"/></svg>Up to 8 pages, including a page for each service</li>
@@ -271,8 +270,7 @@
           <li><svg class="icon"><use href="#i-bell"/></svg>Alerts you right away</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-light btn-lg" href="mailto:info@oneroadautomations.com?subject=AI%20receptionist">Ask about it</a>
-          <a class="btn btn-outline-light btn-lg" href="#contact"><svg class="icon"><use href="#i-phone"/></svg>Call or text</a>
+          <a class="btn btn-light btn-lg" href="#contact" data-package="AI receptionist">Ask about it</a>
         </div>
       </div>
 
@@ -347,7 +345,7 @@
     <div class="wrap faq-grid">
       <div class="faq-aside">
         <h2 class="h2">Common questions</h2>
-        <p>Don't see yours? Email <a class="text-link" href="mailto:info@oneroadautomations.com">info@oneroadautomations.com</a>, or <a class="text-link" href="#contact">call or text me</a>.</p>
+        <p>Don't see yours? Email <a class="text-link" href="mailto:info@oneroadautomations.com">info@oneroadautomations.com</a> or <a class="text-link" href="#contact">send me a message</a>.</p>
       </div>
       <div class="faq">
         <details>
@@ -383,14 +381,45 @@
     <div class="wrap">
       <div class="cta-card">
         <h2 class="h2">Let's get your business online.</h2>
-        <p class="sub">Questions, or ready to start? Email, call, or text and I'll get back to you as soon as I can. Once you pick a package, I'll send a secure Stripe payment link.</p>
-        <a class="cta-phone" href="tel:+19142632944">(914) 263-2944</a>
-        <a class="cta-email" href="mailto:info@oneroadautomations.com">info@oneroadautomations.com</a>
-        <div class="actions">
-          <a class="btn btn-primary btn-lg" href="tel:+19142632944"><svg class="icon"><use href="#i-phone"/></svg>Call</a>
-          <a class="btn btn-secondary btn-lg" href="sms:+19142632944"><svg class="icon"><use href="#i-message"/></svg>Text</a>
-          <a class="btn btn-secondary btn-lg" href="mailto:info@oneroadautomations.com"><svg class="icon"><use href="#i-mail"/></svg>Email</a>
-        </div>
+        <p class="sub">Questions, or ready to start? Send me a few details below and I'll get back to you by email as soon as I can. Once you pick a package, I'll send a secure Stripe payment link.</p>
+
+        <form class="lead-form" id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <!-- Web3Forms public access key (delivers submissions to info@oneroadautomations.com). Empty = email fallback. -->
+          <input type="hidden" name="access_key" value="" />
+          <input type="hidden" name="subject" value="New website inquiry from oneroadautomations.com" />
+          <input type="hidden" name="from_name" value="One Road Automations website" />
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-body">
+            <div class="field-row">
+              <label class="field"><span>Your name <b class="req" aria-hidden="true">*</b></span><input type="text" name="name" autocomplete="name" required /></label>
+              <label class="field"><span>Business name</span><input type="text" name="business" autocomplete="organization" /></label>
+            </div>
+            <div class="field-row">
+              <label class="field"><span>Email <b class="req" aria-hidden="true">*</b></span><input type="email" name="email" autocomplete="email" required /></label>
+              <label class="field"><span>Phone <em>(optional)</em></span><input type="tel" name="phone" autocomplete="tel" /></label>
+            </div>
+            <label class="field"><span>What are you interested in?</span>
+              <select name="interest" id="interest">
+                <option>Not sure yet</option>
+                <option>Starter website ($500)</option>
+                <option>Standard website ($750)</option>
+                <option>Premium website ($1,000)</option>
+                <option>AI receptionist</option>
+              </select>
+            </label>
+            <label class="field"><span>Tell me about your business <b class="req" aria-hidden="true">*</b></span><textarea name="message" rows="4" required placeholder="What you do, where you work, and whether you have a website now."></textarea></label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Send message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="form-done" id="formDone" hidden>
+            <svg class="icon"><use href="#i-check-circle"/></svg>
+            <p><b>Thanks, your message is on its way.</b><br />I'll get back to you by email as soon as I can.</p>
+          </div>
+        </form>
+
+        <p class="form-note">Prefer email? Write to <a class="text-link" href="mailto:info@oneroadautomations.com">info@oneroadautomations.com</a>. Your details are only used to reply to you; see the <a class="text-link" href="privacy.html">privacy policy</a>.</p>
         <p class="cta-sign">One Road Automations is operated by Vincent Harris · New York</p>
       </div>
     </div>
@@ -419,7 +448,7 @@
       <a href="terms.html">Terms of Service</a>
       <a href="terms.html#refunds">Refund &amp; Cancellation Policy</a>
       <a href="privacy.html">Privacy Policy</a>
-      <a href="#contact">Call or text me</a>
+      <a href="#contact">Contact form</a>
       <a href="mailto:info@oneroadautomations.com">info@oneroadautomations.com</a>
     </nav>
   </div>
@@ -431,8 +460,8 @@
 
 <!-- ===================== STICKY MOBILE BAR ===================== -->
 <div class="mobile-bar">
-  <a class="btn btn-primary" href="tel:+19142632944"><svg class="icon"><use href="#i-phone"/></svg>Call</a>
-  <a class="btn btn-secondary" href="sms:+19142632944"><svg class="icon"><use href="#i-message"/></svg>Text</a>
+  <a class="btn btn-primary" href="#contact">Get started</a>
+  <a class="btn btn-secondary" href="mailto:info@oneroadautomations.com"><svg class="icon"><use href="#i-mail"/></svg>Email</a>
 </div>
 
 <script src="script.js" defer></script>

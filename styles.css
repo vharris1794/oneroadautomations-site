@@ -18,6 +18,7 @@
   --blue-50:   #EEF3FE;
   --blue-100:  #DCE6FD;
   --green:     #12805A;
+  --danger:    #B42318;
 
   --font: "Rethink Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
@@ -371,11 +372,45 @@ button { font: inherit; color: inherit; }
 .cta { text-align: center; }
 .cta-card { max-width: 860px; margin-inline: auto; padding: clamp(40px, 6vw, 68px) clamp(24px, 5vw, 64px); background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: 28px; }
 .cta-card .sub { margin-inline: auto; color: var(--ink-2); }
-.cta-phone { display: inline-block; margin-top: 26px; font-size: clamp(2rem, 1.4rem + 2.6vw, 3.1rem); font-weight: 800; letter-spacing: -0.03em; color: var(--blue); font-variant-numeric: tabular-nums; }
-.cta-email { display: block; width: fit-content; margin: 6px auto 0; font-size: clamp(1.06rem, 1rem + .35vw, 1.2rem); font-weight: 650; color: var(--ink-2); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; text-decoration-color: var(--line-2); overflow-wrap: anywhere; }
-@media (hover: hover) and (pointer: fine) { .cta-email:hover { color: var(--blue); text-decoration-color: var(--blue); } }
-.cta .actions { justify-content: center; margin-top: 22px; }
-.cta-sign { margin-top: 26px; font-size: 14.5px; color: var(--muted); }
+.cta-sign { margin-top: 18px; font-size: 14.5px; color: var(--muted); }
+
+/* Contact form */
+.lead-form { max-width: 640px; margin: 32px auto 0; text-align: left; background: #fff; border: 1px solid var(--blue-100); border-radius: var(--radius-lg); padding: clamp(22px, 4vw, 34px); box-shadow: var(--shadow-sm); }
+.form-body { display: grid; gap: 18px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field { display: grid; gap: 7px; }
+.field > span { font-size: 15.5px; font-weight: 650; color: var(--ink); }
+.field .req { color: var(--blue); font-weight: 700; }
+.field em { font-style: normal; font-weight: 500; color: var(--muted); }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 50px; padding: 12px 14px;
+  font: inherit; font-size: 16px; color: var(--ink);
+  background: #fff; border: 1px solid var(--line-2); border-radius: var(--radius-sm);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.field textarea { min-height: 128px; resize: vertical; line-height: 1.5; }
+.field select {
+  appearance: none; -webkit-appearance: none; padding-right: 44px; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2356657C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 18px;
+}
+.field ::placeholder { color: var(--muted); opacity: 1; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-100); }
+@media (hover: hover) and (pointer: fine) { .field input:hover, .field select:hover, .field textarea:hover { border-color: var(--muted); } }
+.lead-form.was-validated .field :invalid { border-color: var(--danger); }
+.lead-form.was-validated .field :invalid:focus { box-shadow: 0 0 0 3px rgba(180, 35, 24, .15); }
+.lead-form .btn[disabled] { opacity: .7; cursor: progress; }
+.form-status { font-size: 15.5px; font-weight: 600; }
+.form-status:empty { display: none; }
+.form-status.error { color: var(--danger); }
+.form-status.ok { color: var(--green); }
+.form-done { display: grid; justify-items: center; gap: 12px; padding: 18px 8px; text-align: center; color: var(--ink-2); }
+.form-done[hidden], .form-body[hidden] { display: none; }
+.form-done:focus { outline: none; }
+.form-done .icon { width: 44px; height: 44px; color: var(--green); stroke-width: 1.5; }
+.form-done b { color: var(--ink); font-size: 1.15em; }
+.form-note { max-width: 640px; margin: 18px auto 0; font-size: 15.5px; color: var(--muted); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 /* ---------- Policy pages ---------- */
 .policy { max-width: 760px; margin-inline: auto; padding: clamp(48px, 7vw, 88px) 24px clamp(72px, 9vw, 112px); }
@@ -461,6 +496,7 @@ button { font: inherit; color: inherit; }
   .step p { grid-column: 2; }
   .faq summary { padding: 20px 20px; font-size: 16px; }
   .faq details p { padding: 0 20px 22px; }
+  .field-row { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }
   .mobile-bar { display: flex; }
   .site-footer { padding-bottom: 76px; }

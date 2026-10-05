@@ -108,4 +108,79 @@
       check();
     }
   }
+
+  /* ---------- Contact form (delivered to email by Web3Forms) ---------- */
+  var form = document.getElementById("leadForm");
+  var interest = document.getElementById("interest");
+
+  // "Get started" / "Ask about it" buttons pre-select what the visitor clicked
+  document.querySelectorAll("[data-package]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (interest) { interest.value = link.getAttribute("data-package"); }
+    });
+  });
+
+  if (form) {
+    var EMAIL = "info@oneroadautomations.com";
+    var statusEl = document.getElementById("formStatus");
+    var doneEl = document.getElementById("formDone");
+    var bodyEl = form.querySelector(".form-body");
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    var setStatus = function (text, kind) {
+      statusEl.textContent = text;
+      statusEl.className = "form-status" + (kind ? " " + kind : "");
+    };
+    var val = function (name) {
+      var el = form.elements[name];
+      return el ? String(el.value || "").trim() : "";
+    };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.classList.add("was-validated");
+        setStatus("Please fill in your name, a valid email, and a short note about your business.", "error");
+        var firstBad = form.querySelector(".field :invalid");
+        if (firstBad) { firstBad.focus(); }
+        return;
+      }
+      if (form.elements.botcheck && form.elements.botcheck.checked) { return; } // spam bot
+
+      // Until the Web3Forms key is added, hand the answers to the visitor's email app instead.
+      if (!val("access_key")) {
+        var lines = ["Name: " + val("name"), "Business: " + val("business"), "Email: " + val("email"),
+                     "Phone: " + val("phone"), "Interested in: " + val("interest"), "", val("message")];
+        window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Website inquiry: " + val("interest")) +
+                               "&body=" + encodeURIComponent(lines.join("\n"));
+        setStatus("Your email app should open with your message ready to send.", "ok");
+        return;
+      }
+
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      setStatus("", "");
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) { return r.json().then(function (j) { return r.ok && j.success; }); })
+        .then(function (ok) {
+          if (!ok) { throw new Error("send failed"); }
+          bodyEl.hidden = true;
+          doneEl.hidden = false;
+          doneEl.setAttribute("tabindex", "-1");
+          doneEl.focus();
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send message";
+          setStatus("Sorry, your message didn't send. Please try again, or email " + EMAIL + ".", "error");
+        });
+    });
+  }
 })();
