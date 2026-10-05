@@ -10,6 +10,11 @@
 <meta property="og:title" content="One Road Automations | Websites for Local Service Businesses" />
 <meta property="og:description" content="Flat-price websites for local service businesses. Built fast, handed off to you, no monthly fees." />
 <meta property="og:url" content="https://oneroadautomations.com/" />
+<meta property="og:image" content="https://oneroadautomations.com/img/og-card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="One Road Automations: a professional website, yours to keep. Flat price from $500." />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
@@ -91,7 +96,7 @@
         <p class="lede">I design and build fast, mobile-first websites for plumbers, HVAC techs, contractors, and other local service businesses. One flat price, then it's handed off to you: your site, your domain, your hosting. No contracts and no monthly fees to me.</p>
         <div class="actions">
           <a class="btn btn-primary btn-lg" href="#contact">Get started</a>
-          <a class="btn btn-secondary btn-lg" href="#packages">See packages &amp; pricing</a>
+          <a class="btn btn-secondary btn-lg" href="#packages"><span class="lbl-long">See packages &amp; pricing</span><span class="lbl-short">See pricing</span></a>
         </div>
         <ul class="facts">
           <li><svg class="icon"><use href="#i-check"/></svg>Flat price from $500</li>
@@ -116,7 +121,7 @@
         <figure class="phone">
           <figcaption class="sample-tag"><svg class="icon"><use href="#i-eye"/></svg>Sample build · fictional business</figcaption>
           <div class="phone-frame">
-            <div class="phone-screen" id="sampleScreen" tabindex="0" role="region" aria-label="Sample website for a fictional plumbing company. Scroll it and tap its buttons to see what they do.">
+            <div class="phone-screen" id="sampleScreen" tabindex="0" role="region" aria-label="Sample website for a fictional plumbing company. Tap its buttons to see what they do.">
               <div class="ps-top">
                 <span class="ps-logo">Maple &amp; Main<small>PLUMBING &amp; HEATING</small></span>
                 <button class="ps-btn small" type="button" data-demo="call"><svg class="icon"><use href="#i-phone"/></svg>Call</button>
@@ -168,6 +173,7 @@
             </div>
             <div class="ps-toast" id="sampleToast" role="status" aria-live="polite"><svg class="icon"><use href="#i-info"/></svg><span></span></div>
           </div>
+          <button class="btn btn-secondary sample-expand" id="sampleExpand" type="button" aria-expanded="false" aria-controls="sampleScreen">Show the whole sample site</button>
         </figure>
       </div>
     </div>
@@ -187,7 +193,7 @@
   <section class="section" id="packages">
     <div class="wrap">
       <header class="section-head center">
-        <h2 class="h2">Pick a package. Pay once. <span class="hl">Keep it forever.</span></h2>
+        <h2 class="h2">Pick a package. <span class="nowrap">Pay once.</span> <span class="hl">Keep it forever.</span></h2>
         <p class="sub">Every site is built for phones first, loads fast, and puts your phone number one tap away.</p>
       </header>
 
@@ -196,7 +202,7 @@
           <h3>Starter</h3>
           <p class="price-desc">A clean one-page website that makes you look established and gets the phone ringing.</p>
           <p class="price-amt"><strong>$500</strong><span>one-time</span></p>
-          <a class="btn btn-secondary btn-block" href="#contact" data-package="Starter website ($500)">Get started</a>
+          <a class="btn btn-secondary btn-block" href="#leadForm" data-package="Starter website ($500)">Get started</a>
           <ul class="price-list">
             <li><svg class="icon"><use href="#i-check"/></svg>Single-page, mobile-optimized site</li>
             <li><svg class="icon"><use href="#i-check"/></svg>Your logo, colors, and branding</li>
@@ -213,7 +219,7 @@
           <h3>Standard</h3>
           <p class="price-desc">Everything in Starter, plus the pages and proof that turn visitors into calls.</p>
           <p class="price-amt"><strong>$750</strong><span>one-time</span></p>
-          <a class="btn btn-primary btn-block" href="#contact" data-package="Standard website ($750)">Get started</a>
+          <a class="btn btn-primary btn-block" href="#leadForm" data-package="Standard website ($750)">Get started</a>
           <ul class="price-list">
             <li><svg class="icon"><use href="#i-check"/></svg><span><span class="lead">Everything in Starter</span>, plus:</span></li>
             <li><svg class="icon"><use href="#i-check"/></svg>Up to 5 pages (Home, Services, About, Reviews/Gallery, Contact)</li>
@@ -228,7 +234,7 @@
           <h3>Premium</h3>
           <p class="price-desc">Everything in Standard, plus a bigger, more polished site that stands out in your area.</p>
           <p class="price-amt"><strong>$1,000</strong><span>one-time</span></p>
-          <a class="btn btn-secondary btn-block" href="#contact" data-package="Premium website ($1,000)">Get started</a>
+          <a class="btn btn-secondary btn-block" href="#leadForm" data-package="Premium website ($1,000)">Get started</a>
           <ul class="price-list">
             <li><svg class="icon"><use href="#i-check"/></svg><span><span class="lead">Everything in Standard</span>, plus:</span></li>
             <li><svg class="icon"><use href="#i-check"/></svg>Up to 8 pages, including a page for each service</li>
@@ -263,14 +269,15 @@
     <div class="wrap band-grid">
       <div class="band-copy">
         <h2 class="h2">Never miss a call: a&nbsp;24/7 AI receptionist.</h2>
-        <p>It answers your calls and texts day or night, captures the customer's details, and alerts you right away, so an after-hours emergency doesn't go to a competitor. Offered as a separate monthly service whenever you're ready.</p>
+        <p>It answers your calls and texts day or night, captures the customer's details, and alerts you right away, so an after-hours emergency doesn't go to a competitor. Add it whenever you're ready.</p>
+        <p class="band-bridge"><strong>Your website never has a monthly fee.</strong> The receptionist is the one optional monthly service, priced for your business after a quick call.</p>
         <ul class="band-points">
           <li><svg class="icon"><use href="#i-phone"/></svg>Answers calls and texts, day or night</li>
           <li><svg class="icon"><use href="#i-message"/></svg>Captures the customer's details</li>
           <li><svg class="icon"><use href="#i-bell"/></svg>Alerts you right away</li>
         </ul>
         <div class="actions">
-          <a class="btn btn-light btn-lg" href="#contact" data-package="AI receptionist">Ask about it</a>
+          <a class="btn btn-light btn-lg" href="#leadForm" data-package="AI receptionist">Ask about it</a>
         </div>
       </div>
 
@@ -327,7 +334,7 @@
   <section class="section" id="how">
     <div class="wrap">
       <header class="section-head">
-        <h2 class="h2">From first call to live site in <span class="hl">about a week.</span></h2>
+        <h2 class="h2">From first conversation to live site in <span class="hl">about a week.</span></h2>
       </header>
       <ol class="steps">
         <li class="step"><span class="step-num" aria-hidden="true">1</span><h3>Pick a package</h3><p>Choose Starter, Standard, or Premium, plus any add-ons.</p></li>
@@ -381,7 +388,7 @@
     <div class="wrap">
       <div class="cta-card">
         <h2 class="h2">Let's get your business online.</h2>
-        <p class="sub">Questions, or ready to start? Send me a few details below and I'll get back to you by email as soon as I can. Once you pick a package, I'll send a secure Stripe payment link.</p>
+        <p class="sub">Questions, or ready to start? Send me a few details below and I'll reply by email within one business day. Once you pick a package, I'll send a secure Stripe payment link.</p>
 
         <form class="lead-form" id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
           <!-- Web3Forms public access key (delivers submissions to info@oneroadautomations.com). Empty = email fallback. -->
@@ -391,14 +398,6 @@
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="form-body">
-            <div class="field-row">
-              <label class="field"><span>Your name <b class="req" aria-hidden="true">*</b></span><input type="text" name="name" autocomplete="name" required /></label>
-              <label class="field"><span>Business name</span><input type="text" name="business" autocomplete="organization" /></label>
-            </div>
-            <div class="field-row">
-              <label class="field"><span>Email <b class="req" aria-hidden="true">*</b></span><input type="email" name="email" autocomplete="email" required /></label>
-              <label class="field"><span>Phone <em>(optional)</em></span><input type="tel" name="phone" autocomplete="tel" /></label>
-            </div>
             <label class="field"><span>What are you interested in?</span>
               <select name="interest" id="interest">
                 <option>Not sure yet</option>
@@ -408,14 +407,22 @@
                 <option>AI receptionist</option>
               </select>
             </label>
-            <label class="field"><span>Tell me about your business <b class="req" aria-hidden="true">*</b></span><textarea name="message" rows="4" required placeholder="What you do, where you work, and whether you have a website now."></textarea></label>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Send message</button>
+            <div class="field-row">
+              <label class="field"><span>Your name <b class="req" aria-hidden="true">*</b></span><input type="text" name="name" autocomplete="name" required /><small class="field-error" id="err-name" hidden>Please add your name.</small></label>
+              <label class="field"><span>Business name</span><input type="text" name="business" autocomplete="organization" /></label>
+            </div>
+            <div class="field-row">
+              <label class="field"><span>Email <b class="req" aria-hidden="true">*</b></span><input type="email" name="email" autocomplete="email" required /><small class="field-error" id="err-email" hidden>Enter an email like you@yourbusiness.com.</small></label>
+              <label class="field"><span>Phone <em>(optional)</em></span><input type="tel" name="phone" autocomplete="tel" /></label>
+            </div>
+            <label class="field"><span>Tell me about your business <b class="req" aria-hidden="true">*</b></span><textarea name="message" rows="4" required placeholder="What you do, where you work, and whether you have a website now."></textarea><small class="field-error" id="err-message" hidden>Tell me a little about your business.</small></label>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Send message</button>
           </div>
 
           <div class="form-done" id="formDone" hidden>
             <svg class="icon"><use href="#i-check-circle"/></svg>
-            <p><b>Thanks, your message is on its way.</b><br />I'll get back to you by email as soon as I can.</p>
+            <p><b>Thanks, your message is on its way.</b><br />I'll reply by email within one business day.</p>
           </div>
         </form>
 
