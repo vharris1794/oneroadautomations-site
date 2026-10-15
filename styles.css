@@ -532,6 +532,8 @@ button { font: inherit; color: inherit; }
   .bar-managed .mobile-bar { transform: translateY(110%); visibility: hidden; transition: transform 150ms var(--ease-out), visibility 0s linear 150ms; }
   .bar-managed .mobile-bar.show { transform: none; visibility: visible; transition: transform 220ms var(--ease-out); }
   body:has(.mobile-bar) .site-footer { padding-bottom: 76px; }
+  /* Voice demo widget: its host is a full-screen fixed layer, so raising its bottom edge lifts the button above the mobile bar */
+  elevenlabs-convai { bottom: calc(56px + env(safe-area-inset-bottom)) !important; }
 }
 
 /* ---------- Reduced motion ---------- */

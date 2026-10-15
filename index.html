@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400..800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20261014" />
 
 <script type="application/ld+json">
 {
@@ -270,6 +270,7 @@
         <h2 class="h2">Never miss a call: a&nbsp;24/7 AI receptionist.</h2>
         <p>It answers your calls and texts day or night, captures the customer's details, and alerts you right away, so an after-hours emergency doesn't go to a competitor. Add it whenever you're ready.</p>
         <p class="band-bridge"><strong>Included in the $449 plan.</strong> Already on another plan? You can add it any time.</p>
+        <p class="band-bridge"><strong>Hear it for yourself:</strong> tap the voice button in the bottom corner and talk to my AI assistant. Ask it anything, or have it play your receptionist.</p>
         <ul class="band-points">
           <li><svg class="icon"><use href="#i-phone"/></svg>Answers calls and texts, day or night</li>
           <li><svg class="icon"><use href="#i-message"/></svg>Captures the customer's details</li>
@@ -481,5 +482,8 @@
 </div>
 
 <script src="script.js" defer></script>
+<!-- Voice demo (ElevenLabs). Agent settings live in ../voice-agent/; the agent only accepts this domain. -->
+<elevenlabs-convai agent-id="agent_9201m4ysq3vkf28rnbwmnr7q6mxz"></elevenlabs-convai>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
