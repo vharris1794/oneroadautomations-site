@@ -508,12 +508,15 @@ button { font: inherit; color: inherit; }
 .video-frame { max-width: 960px; margin-inline: auto; aspect-ratio: 16 / 9; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); background: var(--bg-soft); box-shadow: var(--shadow-lg); }
 .video-frame video { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--bg-soft); }
 .video-frame { position: relative; }
-.video-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px 14px 18px; border: 0; border-radius: 999px; background: var(--blue); color: #fff; font: 700 18px/1 var(--font); box-shadow: var(--shadow-lg); cursor: pointer; transition: background .2s var(--ease-out), transform .2s var(--ease-out); }
+.video-play { position: absolute; inset: 0; display: grid; place-items: center; padding: 0; border: 0; background: transparent; cursor: pointer; }
 .video-play[hidden] { display: none; }
-.video-play svg { width: 26px; height: 26px; fill: currentColor; }
-.video-play:hover { background: var(--blue-600); transform: translate(-50%, -50%) scale(1.04); }
-.video-play:focus-visible { outline: 3px solid var(--blue-100); outline-offset: 3px; }
-@media (max-width: 760px) { .video-play { padding: 10px 16px 10px 12px; font-size: 15px; gap: 6px; } .video-play svg { width: 20px; height: 20px; } }
+.video-play-circle { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%; background: rgba(12, 16, 24, .62); color: #fff; box-shadow: 0 4px 18px rgba(0, 0, 0, .25); transition: background .2s var(--ease-out), transform .2s var(--ease-out); }
+.video-play-circle svg { width: 34px; height: 34px; margin-left: 4px; fill: currentColor; }
+.video-play:hover .video-play-circle { background: rgba(12, 16, 24, .8); transform: scale(1.06); }
+.video-play:focus-visible { outline: none; }
+.video-play:focus-visible .video-play-circle { outline: 3px solid var(--blue); outline-offset: 3px; background: rgba(12, 16, 24, .8); }
+.video-duration { position: absolute; right: 12px; bottom: 12px; padding: 4px 8px; border-radius: 6px; background: rgba(12, 16, 24, .78); color: #fff; font: 600 14px/1 var(--font); letter-spacing: .02em; }
+@media (max-width: 760px) { .video-play-circle { width: 58px; height: 58px; } .video-play-circle svg { width: 26px; height: 26px; margin-left: 3px; } .video-duration { right: 8px; bottom: 8px; font-size: 12px; } }
 
 @media (max-width: 760px) {
   body { font-size: 16px; }
