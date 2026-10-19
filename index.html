@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400..800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20261018" />
+<link rel="stylesheet" href="styles.css?v=20261019b" />
 
 <script type="application/ld+json">
 {
@@ -189,6 +189,27 @@
       <div class="promise"><svg class="icon"><use href="#i-key"/></svg><div><b>Your domain stays yours</b><span>Registered in your name, never mine.</span></div></div>
       <div class="promise"><svg class="icon"><use href="#i-calendar-x"/></svg><div><b>No long contracts</b><span>3-month minimum, then month to month.</span></div></div>
       <div class="promise"><svg class="icon"><use href="#i-mobile"/></svg><div><b>Built for phones first</b><span>Fast to load, one tap to call you.</span></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== VIDEO ===================== -->
+  <section class="section video-section" id="video" aria-labelledby="video-title">
+    <div class="wrap">
+      <header class="section-head center">
+        <h2 class="h2" id="video-title">See how it works <span class="hl nowrap">in about a minute.</span></h2>
+        <p class="sub">Where local trades lose leads, and how a better site and a few simple tools catch them.</p>
+      </header>
+      <div class="video-frame">
+        <video controls preload="none" playsinline width="1280" height="720"
+          poster="media/one-road-explainer-poster.webp"
+          aria-label="One Road Automations explainer video, about a minute long, with captions">
+          <source src="media/one-road-explainer.mp4" type="video/mp4" />
+        </video>
+        <button class="video-play" type="button" hidden aria-label="Play the video (1:08)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+          <span>Play · 1:08</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -486,7 +507,7 @@
   <a class="btn btn-secondary" href="tel:+19142360677"><svg class="icon"><use href="#i-phone"/></svg>Call</a>
 </div>
 
-<script src="script.js" defer></script>
+<script src="script.js?v=20261019" defer></script>
 <!-- Voice demo (ElevenLabs). Agent settings live in ../voice-agent/; the agent only accepts this domain. -->
 <elevenlabs-convai agent-id="agent_9201m4ysq3vkf28rnbwmnr7q6mxz"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>

@@ -251,4 +251,18 @@
         });
     });
   }
+  // Explainer video: a clear play button over the poster; native controls take over once it starts
+  var video = document.querySelector("#video video");
+  var playBtn = document.querySelector("#video .video-play");
+  if (video && playBtn) {
+    playBtn.hidden = false;
+    video.removeAttribute("controls");
+    var start = function () {
+      playBtn.hidden = true;
+      video.setAttribute("controls", "");
+      video.play();
+    };
+    playBtn.addEventListener("click", start);
+    video.addEventListener("play", function () { playBtn.hidden = true; video.setAttribute("controls", ""); });
+  }
 })();
