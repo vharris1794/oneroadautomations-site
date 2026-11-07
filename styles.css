@@ -403,9 +403,6 @@ button { font: inherit; color: inherit; }
 .lead-form.was-validated .field :invalid { border-color: var(--danger); }
 .lead-form.was-validated .field :invalid:focus { box-shadow: 0 0 0 3px rgba(180, 35, 24, .15); }
 .lead-form .btn[disabled] { opacity: .7; cursor: progress; }
-.consent { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; font-size: 14.5px; line-height: 1.5; color: var(--muted); cursor: pointer; }
-.consent input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--blue); cursor: pointer; }
-.consent b { color: var(--ink); font-weight: 650; }
 .field-error { font-size: 14.5px; font-weight: 600; color: var(--danger); }
 .field-error[hidden] { display: none; }
 .field select.just-picked { border-color: var(--blue); animation: picked 1.6s var(--ease-out); }
@@ -566,6 +563,8 @@ button { font: inherit; color: inherit; }
   body:has(.mobile-bar) .site-footer { padding-bottom: 76px; }
   /* Voice demo widget: its host is a full-screen fixed layer, so raising its bottom edge lifts the button above the mobile bar */
   elevenlabs-convai { bottom: calc(56px + env(safe-area-inset-bottom)) !important; }
+  /* Chat widget bubble sits bottom-left, so leave room for it beside the bar's buttons */
+  .mobile-bar { padding-left: 88px; }
 }
 
 /* ---------- Reduced motion ---------- */
