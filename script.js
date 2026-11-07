@@ -218,7 +218,7 @@
       // Until the Web3Forms key is added, hand the answers to the visitor's email app instead.
       if (!val("access_key")) {
         var lines = ["Name: " + val("name"), "Business: " + val("business"), "Email: " + val("email"),
-                     "Phone: " + val("phone"), "Interested in: " + val("interest"), "", val("message")];
+                     "Interested in: " + val("interest"), "", val("message")];
         window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Website inquiry: " + val("interest")) +
                                "&body=" + encodeURIComponent(lines.join("\n"));
         setStatus("Your email app should open with your message ready to send.", "ok");
